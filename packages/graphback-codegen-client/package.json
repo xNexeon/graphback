@@ -35,14 +35,14 @@
   "devDependencies": {
     "@types/graphql": "14.2.3",
     "@types/knex": "0.15.2",
-    "@types/node": "8.10.56",
+    "@types/node": "8.10.58",
     "ava": "2.4.0",
     "graphql": "14.5.8",
     "rimraf": "3.0.0",
     "ts-node": "8.4.1",
-    "tslint": "5.20.0",
+    "tslint": "5.20.1",
     "tsutils": "3.17.1",
-    "typescript": "3.6.4"
+    "typescript": "3.7.2"
   },
   "dependencies": {
     "@graphback/codegen-core": "0.10.0-dev1"
