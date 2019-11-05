@@ -29,7 +29,7 @@
     ]
   },
   "engines": {
-    "node": ">= 8.0.0"
+    "node": "13.1.0"
   },
   "license": "Apache-2.0",
   "devDependencies": {
@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@graphback/codegen-core": "0.10.0-dev1",
-    "graphql-subscriptions": "^1.1.0",
+    "graphql-subscriptions": "1.1.0",
     "knex": "0.20.0"
   },
   "peerDependencies": {
