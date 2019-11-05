@@ -1,28 +1,20 @@
-import { CustomResolverContext, ResolverTypeContext, TargetResolverContext } from  './resolverTypes';
-
-const imports = `import { GraphQLContext } from '../../context'`
+import { CustomResolverContext, ResolverTypeContext, TargetResolverContext } from '../api/resolverTypes';
 
 /**
- * Generate resolvers for each type
+ * Formats generated source code into Apollo GraphQL format
  * @param context `Type` object
  * @param name name of the Type
  */
 // tslint:disable-next-line: max-func-body-length
-const generateTypeResolvers = (context: TargetResolverContext, name: string): string => {
+const generateApolloFormattedResolvers = (context: TargetResolverContext, name: string): string => {
   const { relations, queries, mutations, subscriptions } = context
 
   const outputResolvers = []
 
-  if (relations.length) {
-    outputResolvers.push(`${name}: {
-    ${relations.join(',\n    ')}
-  }`)
-  }
-
   if (queries.length) {
     outputResolvers.push(`Query: {
-    ${context.queries.join(',\n    ')}
-  }`)
+create${name}
+`);
   }
 
   if (mutations.length) {
